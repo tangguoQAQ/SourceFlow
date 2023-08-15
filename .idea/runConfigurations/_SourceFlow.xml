@@ -2,7 +2,7 @@
   <configuration default="false" name="运行 SourceFlow" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="tgmori.sourceflow.SourceFlow" />
     <module name="SourceFlow.main" />
-    <option name="VM_PARAMETERS" value="-Dfile.encoding=UTF-8" />
+    <option name="VM_PARAMETERS" value="-Dfile.encoding=UTF-8 -Dlog4j.skipJansi=false" />
     <method v="2" />
   </configuration>
 </component>
