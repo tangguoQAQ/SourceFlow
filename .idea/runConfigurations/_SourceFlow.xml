@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="运行 SourceFlow" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="tgmori.sourceflow.SourceFlow" />
+    <module name="SourceFlow.main" />
+    <method v="2" />
+  </configuration>
+</component>
