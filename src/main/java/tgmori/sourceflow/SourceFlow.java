@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 public class SourceFlow {
 	public static final Logger LOGGER = LogManager.getLogger("SourceFlow");
+	public static final String NAME = "Source Flow";
 
 	public static void main(String[] args) {
 		SourceFlow.LOGGER.info("开始运行 Source Flow。");
