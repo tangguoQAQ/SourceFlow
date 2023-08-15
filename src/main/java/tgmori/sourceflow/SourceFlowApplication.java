@@ -1,12 +1,7 @@
 package tgmori.sourceflow;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.jetbrains.annotations.Nullable;
-
-import java.io.IOException;
 
 public class SourceFlowApplication extends Application {
 	/**
@@ -15,7 +10,7 @@ public class SourceFlowApplication extends Application {
 	private static Stage primaryStage = null;
 
 	@Override
-	public void start(Stage primaryStage) throws IOException {
+	public void start(Stage primaryStage) {
 		this.setPrimaryStage(primaryStage);
 
 		this.initPrimaryStage();
@@ -23,7 +18,7 @@ public class SourceFlowApplication extends Application {
 	}
 
 	@Override
-	public void stop() throws Exception {
+	public void stop() {
 
 	}
 
@@ -32,10 +27,12 @@ public class SourceFlowApplication extends Application {
 	}
 
 	private void initPrimaryStage() {
+		SourceFlow.LOGGER.info("初始化游戏窗口。");
 		primaryStage.setTitle("SourceFlow");
 	}
 
 	private void showPrimaryStage() {
+		SourceFlow.LOGGER.info("显示游戏窗口。");
 		primaryStage.show();
 	}
 }
