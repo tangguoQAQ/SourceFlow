@@ -6,4 +6,6 @@ module tgmori.sourceflow {
 
 	opens tgmori.sourceflow to javafx.fxml;
 	exports tgmori.sourceflow;
+	exports tgmori.sourceflow.resource;
+	opens tgmori.sourceflow.resource to javafx.fxml;
 }

@@ -9,7 +9,7 @@ public class SFScenes {
 	public static final SFScene FIRST_SCENE = ABOUT_SCENE;
 
 	private static SFScene register(SFScene scene) {
-		SourceFlow.LOGGER.info("注册场景：{}", scene.getIdentifier());
+		SourceFlow.LOGGER.info("注册场景：{}；", scene.getIdentifier());
 		return SFSceneManager.register(scene);
 	}
 }

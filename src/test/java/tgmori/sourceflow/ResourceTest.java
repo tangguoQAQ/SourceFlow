@@ -2,9 +2,9 @@ package tgmori.sourceflow;
 
 import org.junit.jupiter.api.Test;
 
-class ResourceTest {
+public class ResourceTest {
 	@Test
 	void test() {
-		ResourceManager._debug();
+		System.out.println(ResourceTest.class.getResource(""));
 	}
 }

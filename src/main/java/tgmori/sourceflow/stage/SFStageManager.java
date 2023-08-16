@@ -2,6 +2,7 @@ package tgmori.sourceflow.stage;
 
 import javafx.stage.Stage;
 import tgmori.sourceflow.SourceFlow;
+import tgmori.sourceflow.resource.ResourceManager;
 import tgmori.sourceflow.scene.SFSceneManager;
 import tgmori.sourceflow.scene.SFScenes;
 
@@ -13,26 +14,38 @@ public class SFStageManager {
 
 	public static void init(Stage primaryStage) {
 		SourceFlow.LOGGER.info("初始化游戏窗口。");
-
-		// 初始化窗口属性
 		SFStageManager.primaryStage = primaryStage;
-		SFStageManager.config();
 
-		//初始化游戏场景
-		SFSceneManager.bind(primaryStage, SFScenes.FIRST_SCENE);
-		SFSceneManager.initSFScenes();
+		initStageProperty();
+		initResource();
+		initSceneManager();
+
 	}
 
-	private static void config() {
+	private static void initStageProperty() {
 		SFStageProperty.applyTo(primaryStage);
+	}
+
+	private static void initResource() {
+		ResourceManager.init();
+	}
+
+	private static void initSceneManager() {
+		SFSceneManager.bind(primaryStage, SFScenes.FIRST_SCENE);
+		SFSceneManager.loadScenes();
 	}
 
 	public static void show() {
 		SourceFlow.LOGGER.info("显示游戏窗口。");
-		SFStageManager.primaryStage.show();
+		primaryStage.show();
 	}
 
 	public static Stage getStage() {
 		return primaryStage;
+	}
+
+	public static void close() {
+		SourceFlow.LOGGER.info("关闭游戏窗口。");
+		SFSceneManager.close();
 	}
 }

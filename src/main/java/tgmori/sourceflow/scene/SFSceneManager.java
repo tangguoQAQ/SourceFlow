@@ -29,8 +29,8 @@ public class SFSceneManager {
 		sfSceneSwitcher = newScene -> stage.setScene(newScene.getScene());
 	}
 
-	public static void initSFScenes() {
-		SourceFlow.LOGGER.info("初始化游戏场景，共 {} 个。", sfScenes.size());
+	public static void loadScenes() {
+		SourceFlow.LOGGER.info("加载游戏场景，共 {} 个。", sfScenes.size());
 		sfScenes.forEach(SFScene::init);
 	}
 
@@ -45,5 +45,9 @@ public class SFSceneManager {
 
 	public static SFScene getCurrent() {
 		return current;
+	}
+
+	public static void close() {
+		current.onHiding();
 	}
 }

@@ -13,6 +13,6 @@ public class SourceFlowApplication extends Application {
 
 	@Override
 	public void stop() {
-
+		SFStageManager.close();
 	}
 }

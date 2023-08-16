@@ -42,14 +42,4 @@
             <appender-ref ref="RollingFileDebug"/>
         </root>
     </loggers>
-
-    <Plugins>
-        <Plugin name="HighlightConverter" class="org.apache.logging.log4j.core.pattern.HighlightConverter">
-            <KeyValuePair key="ERROR" value="magenta,red,bg_white,bold"/>
-            <KeyValuePair key="WARN" value="magenta,yellow,bg_black,bold"/>
-            <KeyValuePair key="INFO" value="magenta,green,dim"/>
-            <KeyValuePair key="DEBUG" value="magenta,cyan,dim"/>
-            <KeyValuePair key="TRACE" value="magenta,blue,dim"/>
-        </Plugin>
-    </Plugins>
 </configuration>
